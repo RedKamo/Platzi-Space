@@ -1,5 +1,17 @@
+@import "./Media.scss";
+
 body {
-  margin: 0;
-  background-color: red;
-  color: aliceblue;
+  margin: 0px;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  //background-image: url("../static/123.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: royalblue;
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
