@@ -1,0 +1,52 @@
+body {
+  margin: 0px;
+  height: 100%;
+  background-image: url("/public/images/error1.jpg") ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.error__container {
+  padding: 0px 0px;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.error__container--details {
+  color: hotpink;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+}
+
+.error__container--404 {
+  text-align: center;
+  color: hotpink;
+  font-size: 15em;
+  margin: 0;
+}
+.error__container--details-txt {
+  font-size: 2.2em;
+}
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wobble {
+  0% {transform: translateX(0%);}
+  15% {transform: translateX(-25%) rotate(-5deg);}
+  30% {transform: translateX(20%) rotate(3deg);}
+  45% {transform: translateX(-15%) rotate(-3deg);}
+  60% {transform: translateX(10%) rotate(2deg);}
+  75% {transform: translateX(-5%) rotate(-1deg);}
+  100% {transform: translateX(0%);}
+}
+.wobble {
+  animation-name: wobble;
+}
