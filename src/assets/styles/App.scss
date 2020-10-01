@@ -2,14 +2,13 @@
 
 body {
   margin: 0px;
-  height: 100%;
+  height: 87vh;
   font-family: 'Roboto', sans-serif;
-  //background-image: url("../static/123.jpg");
+  background-image: url("/public/images/123.jpg") ;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-color: royalblue;
 }
 
 ::-webkit-scrollbar{

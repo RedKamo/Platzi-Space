@@ -2,7 +2,9 @@ export const actions = {
   setFavorite: 'SET_FAVORITE',
   deleteFavorite: 'DELETE_FAVORITE',
   loginRequest: 'LOGIN_REQUEST',
-  logoutRequest: 'LOGOUT_REQUEST'
+  logoutRequest: 'LOGOUT_REQUEST',
+  registerRequest: 'REGISTER_REQUEST',
+  getVideoSource: 'GET_VIDE0_SOURCE'
 };
 
 export const setFavorite = payload => ({
@@ -17,10 +19,20 @@ export const deleteFavorite = payload => ({
 
 export const loginRequest = payload => ({
   type: actions.loginRequest,
-  payload
+  payload,
 });
 
 export const logoutRequest = payload => ({
   type: actions.logoutRequest,
-  payload
-})
+  payload,
+});
+
+export const registerRequest = payload => ({
+  type: actions.registerRequest,
+  payload,
+});
+
+export const getVideoSource = payload => ({
+  type: actions.getVideoSource,
+  payload,
+});
