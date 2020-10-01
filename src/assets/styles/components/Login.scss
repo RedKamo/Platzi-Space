@@ -1,0 +1,96 @@
+
+.login {
+  width: 100%;
+  //background-image: url('https://ss.netnr.com/wallpaper');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 0px;
+  min-height: calc(100vh - 200px);
+  
+}
+.login__container {
+  background-color: rgba(0,0, 0, 0.5);
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  padding: 60px 60px 40px;
+  min-height: 600px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  
+}
+.login__container--form {
+  display: flex;
+  flex-direction: column;
+}
+.login__container--form label {
+  font-size: 15px;
+}
+.login__container--remember-me {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.login__container--remember-me a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+.login__container--remember-me a:hover {
+  text-decoration: underline;
+}
+.login__container--social-media > div {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.login__container--social-media > div > img {
+  width: 30px;
+  margin-right: 10px;
+}
+.login__container--register {
+  font-size: 15px;
+}
+.login__container--register a {
+  font-size: 17px;
+  font-weight: bold;
+  color: #d27087;
+  text-decoration: none;
+}
+.login__container--register a:hover {
+  text-decoration: underline;
+}
+.input {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  font-size: 17px;
+  font-family: 'Muli', sans-serif;
+  margin-bottom: 20px;
+  padding: 0px ;
+  height: 50px;
+  width: 100%;
+}
+::placeholder {
+  color: white;
+  padding-left: 20px;
+}
+.button {
+  background-color: #d27087;
+  //background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Muli', sans-serif;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 10px 0px ;
+}

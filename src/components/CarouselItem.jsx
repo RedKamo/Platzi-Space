@@ -1,24 +1,57 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import { connect } from 'react-redux';
+import { setFavorite, deleteFavorite } from '../actions';
+import PropTypes from 'prop-types';
 import '../assets/styles/components/CarouselItem.scss';
 import playicon from '../assets/static/playicon.png';
-import pauseicon from '../assets/static/pauseicon.png';
+import addicon from '../assets/static/add.png';
+import cancelicon from '../assets/static/cancel.png';
+const CarouselItem =(props) =>{
+  const { id, cover, title, year, contentRating, duration, isList } = props;
 
-const CarouselItem =({cover, title, year, contentRating, duration})=> (
-  <div className="carousel-item">
-    <img className="carousel-item__img" src={cover} alt={title}/>
-  <div className="carousel-item__details">
-  <div>
-    <img className="carousel-item__icons" src={playicon} alt="" />
-    <img className="carousel-item__icons" src={pauseicon} alt="" />
-  </div>
-    <p className="carousel-item__details--title">{title}</p>
-    <p className="carousel-item__details--subtitle">{`${year} ${contentRating} ${duration}`}</p>
-  </div>
-</div>
-)
+  const handleSetFavorite = () => {
+    props.setFavorite({
+      id, cover, title, year, contentRating, duration, isList
+    })
+  }
+  
+  const handleDeleteFavorite = (itemId) => {
+    props.deleteFavorite (itemId)
+  }
 
-CarouselItem.prototype = {
+  return(
+    <div className="carousel-item">
+      <img className="carousel-item__img" src={cover} alt={title}/>
+    <div className="carousel-item__details">
+    <div>
+      <img className="carousel-item__icons" src={playicon} alt="" />
+
+      {
+        isList ?
+        <img
+        className="carousel-item__icons"
+        src={cancelicon}
+        onClick={()=> handleDeleteFavorite(id)} 
+      /> :
+        
+        <img 
+        className="carousel-item__icons" 
+        src={addicon} 
+        alt="" 
+        onClick={handleSetFavorite} 
+    />
+
+        
+      }
+
+    </div>
+      <p className="carousel-item__details--title">{title}</p>
+      <p className="carousel-item__details--subtitle">{`${year} ${contentRating} ${duration}`}</p>
+    </div>
+    </div>
+)};
+
+CarouselItem.propTypes = {
   cover: PropTypes.string,
   title: PropTypes.string,
   year: PropTypes.number,
@@ -26,5 +59,10 @@ CarouselItem.prototype = {
   duration: PropTypes.number,
 }
 
+const mapDispatchToProps = {
+  setFavorite,
+  deleteFavorite,
+}
 
-export default CarouselItem;
+
+export default connect(null, mapDispatchToProps)(CarouselItem);
