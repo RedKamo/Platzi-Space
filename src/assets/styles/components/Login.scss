@@ -1,15 +1,19 @@
 
 .login {
   width: 100%;
-  //background-image: url('https://ss.netnr.com/wallpaper');
+  height: 87vh;
+  background-image: url("/public/images/backregistro.jpg") ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 0px 0px;
-  min-height: calc(100vh - 200px);
-  
 }
+
 .login__container {
   background-color: rgba(0,0, 0, 0.5);
   border: 2px solid white;

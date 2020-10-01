@@ -1,12 +1,18 @@
 .footer {
   display: flex;
   align-items: center;
-  height: 100px;
   width: 100%;
+  background-color: #000000;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:60px;
+  width:100%;
+
 }
 .footer a {
-  color: #d27087 ;
-  font-size: 18px;
+  color:white ;
+  font-size: 16px;
   cursor: pointer;
   padding-left: 20px;
   text-decoration: none;
